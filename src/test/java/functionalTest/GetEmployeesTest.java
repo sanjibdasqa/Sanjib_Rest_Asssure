@@ -15,8 +15,8 @@ Employees employees;
 	}
 	
 	@Test
-	public void getPlayersValidation() {
-		employees.getPlayers();
+	public void getEmployeesValidation() {
+		employees.getEmployees();
 		employees.validateStatusCode(200);
 	}
 

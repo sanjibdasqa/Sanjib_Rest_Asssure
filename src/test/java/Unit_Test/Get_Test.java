@@ -15,13 +15,13 @@ public class Get_Test {
 	 }
 
 	 @Test(enabled = false)
-	 public void getEmployeeVar() {
+	 public void getEmployeesVar() {
 	 Response response =RestAssured.get(" http://localhost:3000/employees");
 	 System.out.println(response.asString());
 	 }
 
 	 @Test(enabled = false)
-	 public void getEmployeeResponseCodeValidation() {
+	 public void getEmployeesResponseCodeValidation() {
 	     RestAssured.get(" http://localhost:3000/employees/5")
 	     .then()
 	     .statusCode(200);
@@ -29,14 +29,14 @@ public class Get_Test {
 	 }
 
 	 @Test(enabled = false)
-	 public void getEmployeeResponseCodeValidationNegativeTest404() {
+	 public void getEmployeesResponseCodeValidationNegativeTest404() {
 	     RestAssured.get(" http://localhost:3000/employees/6")
 	     .then()
 	     .statusCode(404);
 	 }
 
 	 @Test(enabled = false)
-	 public void getEmployeeLogs() {
+	 public void getEmployeesLogs() {
 	 RestAssured.given()
 	 .log().all()
 	 .get(" http://localhost:3000/employees")
@@ -46,7 +46,7 @@ public class Get_Test {
 	 }
 
 	 @Test(enabled =true )
-	 public void getEmployeeResponseValidation() {
+	 public void getEmployeesResponseValidation() {
 		 RestAssured.given()
 		 .log().all()
 		 .get(" http://localhost:3000/employees/4")
